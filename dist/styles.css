@@ -1,0 +1,172 @@
+:root {
+  --primary: hsl(257, 40%, 49%);
+  --secondary: hsl(300, 69%, 71%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: white;
+  background-color: var(--primary);
+  background-image: url("../images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  line-height: 1.5;
+  margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1318px;
+  margin-inline: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header img {
+  padding: 2rem;
+  0 0 2rem
+}
+
+main {
+  display: flex;
+  align-items: center;
+  height: 85%;
+}
+
+.hero-image,
+.hero-text {
+  width: 50%;
+  display: flex;
+}
+
+.hero-image {
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem 0 4rem;
+}
+
+.hero-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 4rem 0 2rem;
+}
+
+.socials a {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+}
+
+i {
+  color: white;
+  transition: color 0.3s;
+}
+
+i:hover {
+  color: var(--secondary);
+}
+
+.fa-facebook {
+  position: relative;
+  bottom: 0px;
+  right: 180px;
+}
+
+.fa-twitter {
+  position: relative;
+  bottom: 0px;
+  right: 110px;
+}
+
+.fa-instagram {
+  position: relative;
+  bottom: 0px;
+  right: 40px;
+}
+
+.register {
+  background-color: white;
+  color: var(--primary);
+  padding: 10px 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+}
+
+.register:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+@media (max-width: 1317px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+  }
+
+  main {
+    flex-direction: column;
+    padding-inline: 1.2rem;
+  }
+
+  .hero-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .socials a {
+    position: static;
+    margin-right: 1rem;
+  }
+
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram {
+    position: unset;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 0;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .hero-image,
+  .hero-text {
+    padding: 0;
+    width: 100%;
+  }
+
+}
